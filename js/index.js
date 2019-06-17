@@ -41,6 +41,8 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const nav = document.querySelector('nav')
+
 const navLinks = document.querySelectorAll('nav a')
 navLinks[0].textContent = siteContent['nav']['nav-item-1']
 navLinks[1].textContent = siteContent['nav']['nav-item-2']
@@ -48,6 +50,22 @@ navLinks[2].textContent = siteContent['nav']['nav-item-3']
 navLinks[3].textContent = siteContent['nav']['nav-item-4']
 navLinks[4].textContent = siteContent['nav']['nav-item-5']
 navLinks[5].textContent = siteContent['nav']['nav-item-6']
+
+// Task 3: Utilize .appendChild() and .prepend() to add two new items to the navigation system. You can call them whatever you want.
+const navAppendLink = document.createElement('a')
+const navPrependLink = document.createElement('a')
+
+nav.appendChild(navAppendLink)
+navAppendLink.textContent = 'Reviews'
+nav.prepend(navPrependLink)
+navPrependLink.textContent = 'Home'
+
+// Task 3: Change the color of the navigation text to be green.
+const navLinksGreen = document.querySelectorAll('nav a')
+
+navLinksGreen.forEach(item => {
+  item.style.color = 'green'
+})
 
 // @@@@@@@@@@ CTA @@@@@@@@@@
 const ctaImg = document.getElementById('cta-img')
