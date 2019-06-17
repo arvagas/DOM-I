@@ -63,6 +63,20 @@ ctaButton.textContent = siteContent['cta']['button']
 const midImg = document.getElementById('middle-img')
 midImg.setAttribute('src',siteContent['main-content']['middle-img-src'])
 
+const contentHeader = document.querySelectorAll('.main-content h4')
+contentHeader[0].textContent = siteContent['main-content']['features-h4']
+contentHeader[1].textContent = siteContent['main-content']['about-h4']
+contentHeader[2].textContent = siteContent['main-content']['services-h4']
+contentHeader[3].textContent = siteContent['main-content']['product-h4']
+contentHeader[4].textContent = siteContent['main-content']['vision-h4']
+
+const contentText = document.querySelectorAll('.main-content p')
+contentText[0].textContent = siteContent['main-content']['features-content']
+contentText[1].textContent = siteContent['main-content']['about-content']
+contentText[2].textContent = siteContent['main-content']['services-content']
+contentText[3].textContent = siteContent['main-content']['product-content']
+contentText[4].textContent = siteContent['main-content']['vision-content']
+
 //@@@@@@@@@@ Contact/Footer @@@@@@@@@@
 const contactHeader = document.querySelector('.contact h4')
 contactHeader.textContent = siteContent['contact']['contact-h4']
