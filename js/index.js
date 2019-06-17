@@ -49,8 +49,28 @@ navLinks[3].textContent = siteContent['nav']['nav-item-4']
 navLinks[4].textContent = siteContent['nav']['nav-item-5']
 navLinks[5].textContent = siteContent['nav']['nav-item-6']
 
+// @@@@@@@@@@ CTA @@@@@@@@@@
 const ctaImg = document.getElementById('cta-img')
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
 
+const ctaTag = document.querySelector('h1')
+ctaTag.textContent = siteContent['cta']['h1']
+
+const ctaButton = document.querySelector('button')
+ctaButton.textContent = siteContent['cta']['button']
+
+// @@@@@@@@@@ Middle Section @@@@@@@@@@
 const midImg = document.getElementById('middle-img')
 midImg.setAttribute('src',siteContent['main-content']['middle-img-src'])
+
+//@@@@@@@@@@ Contact/Footer @@@@@@@@@@
+const contactHeader = document.querySelector('.contact h4')
+contactHeader.textContent = siteContent['contact']['contact-h4']
+
+const contactInfo = document.querySelectorAll('.contact p')
+contactInfo[0].textContent = siteContent['contact']['address']
+contactInfo[1].textContent = siteContent['contact']['phone']
+contactInfo[2].textContent = siteContent['contact']['email']
+
+const footerCR = document.querySelector('footer')
+footerCR.textContent = siteContent['footer']['copyright']
