@@ -37,8 +37,15 @@ const siteContent = {
   },
 };
 
+let header = document.querySelector('header')
+header.style.borderColor = 'green'
+header.style.borderBottomColor = 'blue'
+header.style.borderStyle = 'solid'
+header.style.borderBottomStyle = 'dashed'
+header.style.borderWidth = '5px'
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+let logo = document.querySelector('#logo-img');
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const nav = document.querySelector('nav')
@@ -61,6 +68,7 @@ nav.prepend(navPrependLink)
 navPrependLink.textContent = 'Home'
 
 // Task 3: Change the color of the navigation text to be green.
+// Make a new array to include appended/prepended nav
 const navLinksGreen = document.querySelectorAll('nav a')
 
 navLinksGreen.forEach(item => {
@@ -68,8 +76,15 @@ navLinksGreen.forEach(item => {
 })
 
 // @@@@@@@@@@ CTA @@@@@@@@@@
-const ctaImg = document.getElementById('cta-img')
+
+const cta = document.querySelector('.cta')
+cta.style.backgroundColor = 'gray'
+
+const ctaImg = document.querySelector('#cta-img')
 ctaImg.setAttribute('src', siteContent['cta']['img-src'])
+ctaImg.style.borderStyle = 'solid'
+ctaImg.style.borderWidth = '2px'
+ctaImg.style.borderColor = 'red'
 
 const ctaTag = document.querySelector('h1')
 ctaTag.textContent = siteContent['cta']['h1']
@@ -78,7 +93,7 @@ const ctaButton = document.querySelector('button')
 ctaButton.textContent = siteContent['cta']['button']
 
 // @@@@@@@@@@ Middle Section @@@@@@@@@@
-const midImg = document.getElementById('middle-img')
+const midImg = document.querySelector('#middle-img')
 midImg.setAttribute('src',siteContent['main-content']['middle-img-src'])
 
 const contentHeader = document.querySelectorAll('.main-content h4')
@@ -87,6 +102,11 @@ contentHeader[1].textContent = siteContent['main-content']['about-h4']
 contentHeader[2].textContent = siteContent['main-content']['services-h4']
 contentHeader[3].textContent = siteContent['main-content']['product-h4']
 contentHeader[4].textContent = siteContent['main-content']['vision-h4']
+contentHeader.forEach(item => {
+  item.style.color = 'pink'
+  item.style.fontSize = '2.0rem'
+  item.style.backgroundColor = 'orange'
+})
 
 const contentText = document.querySelectorAll('.main-content p')
 contentText[0].textContent = siteContent['main-content']['features-content']
@@ -98,6 +118,7 @@ contentText[4].textContent = siteContent['main-content']['vision-content']
 //@@@@@@@@@@ Contact/Footer @@@@@@@@@@
 const contactHeader = document.querySelector('.contact h4')
 contactHeader.textContent = siteContent['contact']['contact-h4']
+contactHeader.style.color = 'purple'
 
 const contactInfo = document.querySelectorAll('.contact p')
 contactInfo[0].textContent = siteContent['contact']['address']
@@ -106,3 +127,4 @@ contactInfo[2].textContent = siteContent['contact']['email']
 
 const footerCR = document.querySelector('footer')
 footerCR.textContent = siteContent['footer']['copyright']
+footerCR.style.fontSize = "2.8rem"
