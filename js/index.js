@@ -91,6 +91,18 @@ ctaTag.textContent = siteContent['cta']['h1']
 
 const ctaButton = document.querySelector('button')
 ctaButton.textContent = siteContent['cta']['button']
+ctaButton.addEventListener('click', () => {
+  header.style.borderStyle = 'none'
+  cta.style.backgroundColor = 'white'
+  ctaImg.style.borderStyle = 'none'
+  contentHeader.forEach(item => {
+    item.style.color = 'black'
+    item.style.fontSize = '1rem'
+    item.style.backgroundColor = 'white'
+  })
+  contactHeader.style.color = 'black'
+  footerCR.style.fontSize = "1rem"
+})
 
 // @@@@@@@@@@ Middle Section @@@@@@@@@@
 const midImg = document.querySelector('#middle-img')
