@@ -28,7 +28,6 @@ reset.addEventListener('click', () => {
     }
     else if (counter < 10000) {
         clearInterval(countUp)
-        counter = 0
         startTime = Date.now()
         countUp = setInterval(timer, 1) // Updates every 1ms
     }
@@ -41,7 +40,7 @@ let msHundredsDisp = document.querySelector('#msHundreds')
 let msTensDisp = document.querySelector('#msTens')
 const digits = document.querySelectorAll('.digits')
 
-// Initial Variables
+// Initialize Global Variables
 let startTime
 let countUp
 let counter
