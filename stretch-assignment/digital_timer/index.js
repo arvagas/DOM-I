@@ -11,6 +11,14 @@ start.addEventListener('click', () => {
     startTime = Date.now()
     countUp = setInterval(timer, 1) // Updates every 1ms
 })
+reset.addEventListener('click', () => {
+    start.disabled=false
+    msTensDisp.textContent = '-'
+    msHundredsDisp.textContent = '-'
+    secondOnesDisp.textContent = '-'
+    secondTensDisp.textContent = '-'
+    digits.forEach(item => item.classList.toggle('redDigit'))
+})
 
 // Selectors
 let secondTensDisp = document.querySelector('#secondTens')
